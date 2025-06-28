@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-
-const MotionLink = motion(Link);
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 const Courses = () => {
+  // Initialize AOS animations
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   const courses = [
     "Placement and Training",
     "Coaching for Competitive Exams",
@@ -20,7 +24,7 @@ const Courses = () => {
   return (
     <>
       {/* Hero Section */}
-      <motion.section
+      <section
         className="text-dark d-flex align-items-center"
         style={{
           backgroundImage: "url('/assets/banner.jpg')",
@@ -28,12 +32,10 @@ const Courses = () => {
           backgroundPosition: "center",
           minHeight: "300px",
         }}
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        data-aos="fade-down"
       >
         <div className="container">
-          <div className="col-md-8">
+          <div className="col-md-8" data-aos="fade-up" data-aos-delay="200">
             <h2 className="display-6 fw-bold">Our Courses</h2>
             <p className="mt-3">
               Embarking on the journey towards a brighter future is a shared endeavor, one where collective
@@ -42,39 +44,33 @@ const Courses = () => {
             </p>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Courses List */}
-      <motion.section
+      <section
         className="py-5 bg-light"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
+        data-aos="fade-up"
       >
         <div className="container">
           <div className="d-flex justify-content-between align-items-center mb-4">
-            <h3 className="fw-bold text-dark">Our Courses</h3>
-            <MotionLink
+            <h3 className="fw-bold text-dark" data-aos="fade-down">Our Courses</h3>
+            <Link
               to="/"
               className="btn btn-outline-warning"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 300 }}
+              data-aos="fade-up"
+              data-aos-delay="200"
             >
               Back to Home
-            </MotionLink>
+            </Link>
           </div>
 
           <div className="row g-4">
             {courses.map((title, index) => (
-              <motion.div
+              <div
                 className="col-12 col-sm-6 col-lg-4"
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                data-aos="fade-up"
+                data-aos-delay={`${index * 100}`}
               >
                 <div className="card border-0 shadow-sm h-100">
                   <img
@@ -83,25 +79,25 @@ const Courses = () => {
                     className="card-img-top"
                     style={{ height: '220px', objectFit: 'cover' }}
                     onError={(e) => { e.target.src = "/assets/courses/default.jpg"; }}
+                    data-aos="zoom-in"
+                    data-aos-delay="300"
                   />
-                  <div className="card-body d-flex flex-column">
+                  <div className="card-body d-flex flex-column" data-aos="fade-up" data-aos-delay="400">
                     <h5 className="fw-bold mb-3">{title}</h5>
-
-                    <motion.button
+                    <button
                       className="btn btn-danger mt-auto w-100"
-                      whileHover={{ scale: 1.03 }}
-                      whileTap={{ scale: 0.95 }}
-                      transition={{ type: "spring", stiffness: 250 }}
+                      data-aos="zoom-in"
+                      data-aos-delay="500"
                     >
                       Apply Now
-                    </motion.button>
+                    </button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
-      </motion.section>
+      </section>
     </>
   );
 };

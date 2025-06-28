@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const BANK_Couching = () => {
   return (
-    <div className="container my-5">
+    <div className="my-5">
       {/* Breadcrumb */}
-      <nav aria-label="breadcrumb container-fluid" className="bg-light p-4 mt-5 rounded">
+      <nav aria-label="breadcrumb container-fluid" className="bg-light p-4  rounded">
         <h2 className="text-dark">Bank Exam Coaching Centre</h2>
         <ol className="breadcrumb bg-gry">
           <li className="breadcrumb-item">

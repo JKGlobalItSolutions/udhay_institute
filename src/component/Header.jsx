@@ -69,8 +69,8 @@ const Header = () => {
                     <li><Link className="dropdown-item" to="/SSC_Coaching">SSC</Link></li>
                     <li><Link className="dropdown-item" to="/BANK_Couching">BANK</Link></li>
                     <li><Link className="dropdown-item" to="/Railway_Couching">RAILWAYS</Link></li>
-                    <li><Link className="dropdown-item" to="/police-coaching">POLICE</Link></li>
-                    <li><Link className="dropdown-item" to="/army-navy-airforce">ARMY, NAVY, AIRFORCE</Link></li>
+                    <li><Link className="dropdown-item" to="/PoliceCoaching">POLICE</Link></li>
+                    <li><Link className="dropdown-item" to="/DefenceCoaching">ARMY, NAVY, AIRFORCE</Link></li>
                   </ul>
                 </li>
 
