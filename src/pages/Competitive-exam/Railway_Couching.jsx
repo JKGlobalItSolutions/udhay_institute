@@ -1,5 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import rrb from "./newimg/rrb.jpeg";
+import rrb1 from "./newimg/rrb1.jpeg";
+
+
 
 const RailwayCouching = () => {
   return (
@@ -25,7 +29,7 @@ const RailwayCouching = () => {
       {/* Hero Topper Section */}
       <div className="max-w-6xl mx-auto p-4">
         <h1 className="text-2xl font-bold mb-2 text-center">RRB Exam Coaching </h1>
-        <img src="/topper-banner.jpg" alt="Topper Banner" className="w-full rounded shadow" />
+        <img src={rrb} alt="Topper Banner" className="w-full rounded shadow" />
         <p className="mt-2 text-sm text-center">
           Employees work in various railway departments under the Ministry of Railways.
         </p>
@@ -34,19 +38,19 @@ const RailwayCouching = () => {
       {/* Main Content Section */}
       <div className="max-w-5xl mx-auto px-4 py-6 space-y-4">
         <p>
-          We  Udhay Institute is one of the most trusted RRB coaching centres in Chennai, known for its unique training methodology and exceptional student success rate. Our focus is to provide result-oriented coaching for railway exams with precise strategies and practice-based learning.
+          We  Udhay Welfare Institute is one of the most trusted RRB coaching centres in Chennai, known for its unique training methodology and exceptional student success rate. Our focus is to provide result-oriented coaching for railway exams with precise strategies and practice-based learning.
         </p>
         <p>
           Students get access to comprehensive study materials, regular mock tests, personalized mentorship, and performance tracking. Our training program includes 91 topic tests, 55 section-wise tests, and 127 full-length mock exams to enhance speed and accuracy.
         </p>
         <p>
-          At We  Udhay Institute, we follow an approach that balances theoretical knowledge with practical exposure. Our faculty includes experienced mentors from the railway domain who ensure that every concept is simplified for better understanding.
+          At We  Udhay Welfare Institute, we follow an approach that balances theoretical knowledge with practical exposure. Our faculty includes experienced mentors from the railway domain who ensure that every concept is simplified for better understanding.
         </p>
         <p>
           We cater to job roles such as Clerks, Station Masters, Ticket Collectors, Commercial Apprentices, Trackmen, and more under Group C and D categories. We also prepare students for aptitude and psychological tests as part of the recruitment process.
         </p>
         <p>
-          If you are from Anna Nagar or surrounding areas, visit our RRB Coaching Centre branch for a personalized consultation. Join We  Udhay InstituteAcademy today and give your railway career a head start.
+          If you are from Anna Nagar or surrounding areas, visit our RRB Coaching Centre branch for a personalized consultation. Join We  Udhay Welfare InstituteAcademy today and give your railway career a head start.
         </p>
       </div>
 
@@ -156,9 +160,9 @@ const RailwayCouching = () => {
 
 
       {/* Organization Chart */}
-      <div className="max-w-6xl mx-auto px-4 py-6 text-center">
+      <div className="max-w-6xl mx-auto px-4 py-6 text-center mb-4">
         <h4 className="text-lg font-bold mb-4">Railway Recruitment Exam Format</h4>
-        <img src="/organization-chart.png" alt="Organizational Chart" className="mx-auto w-full max-w-md" />
+        <img src={rrb1} alt="Organizational Chart" className="mx-auto w-full max-w-md rounded-2" />
       </div>
 
       

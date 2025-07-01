@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
+import logo from "../assets/images/logo.jpg";
+
 
 const Header = () => {
   return (
@@ -11,7 +13,7 @@ const Header = () => {
         {/* Logo */}
         <Link className="navbar-brand d-flex align-items-center" to="/">
           <img
-            src="/assets/logo.png"
+            src={logo}
             alt="Udhay Logo"
             style={{
               width: "60px",

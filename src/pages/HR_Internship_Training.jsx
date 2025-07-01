@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import homeimg from "../assets/images/banner/ser 4.jpg";
+
 const HR_Internship_Training = () => {
   return (
-    <main className="container-fluid mt-5">
+    <main className="container-fluid ">
       {/* Breadcrumb */}
       <div className="bread">
         <nav
           aria-label="breadcrumb"
-          style={{ marginTop: '100px' }}
-          className="bg-light p-4"
+          style={{ marginTop: '00px' }}
+          className="bg-light p-3"
         >
           <h2 className="container">HR Internship & Training</h2>
           <ol className="breadcrumb container">
@@ -19,11 +21,22 @@ const HR_Internship_Training = () => {
         </nav>
       </div>
 
+
+         {/* Banner Image */}
+              <div className="container-fluid my-4">
+                <img
+                  src={homeimg}
+                  alt="Computer and IT Training"
+                  className="img-fluid rounded shadow-sm w-100"
+                  style={{ maxHeight: "400px", objectFit: "cover" }}
+                />
+              </div>
+
       {/* Main Content */}
       <div className="container maincontent mt-4">
-        <h3 className="pt-3">Welcome to Udhay  Institute: Your Premier Destination for HR and Intern Training</h3>
+        <h3 className="pt-3">Welcome to Udhay Welfare Institute: Your Premier Destination for HR and Intern Training</h3>
         <p>
-          Welcome to Udhay  Institute, your trusted partner in HR and Intern Training. With a commitment to excellence and a passion for developing future HR leaders, we offer comprehensive training programs designed to equip individuals with the skills and knowledge needed to succeed in the dynamic field of human resources.
+          Welcome to Udhay Welfare Institute, your trusted partner in HR and Intern Training. With a commitment to excellence and a passion for developing future HR leaders, we offer comprehensive training programs designed to equip individuals with the skills and knowledge needed to succeed in the dynamic field of human resources.
         </p>
 
         <h4>Our Mission</h4>
@@ -66,7 +79,7 @@ const HR_Internship_Training = () => {
           We offer full placement support with job referrals, interview prep, and corporate connections.
         </p>
 
-        <h6>Why Choose Udhay  Institute?</h6>
+        <h6>Why Choose Udhay Welfare Institute?</h6>
         <ul className="ps-3">
           <li><b>Expert Faculty:</b> Learn from professionals with real-world experience.</li>
           <li><b>Practical Learning:</b> Real scenarios and simulations.</li>
@@ -76,7 +89,7 @@ const HR_Internship_Training = () => {
 
         <h4 className="pt-3">Get Started Today!</h4>
         <p>
-          Ready to take your HR career to the next level? Contact Udhay  Institute now and begin your journey in HR with confidence and competence.
+          Ready to take your HR career to the next level? Contact Udhay Welfare Institute now and begin your journey in HR with confidence and competence.
         </p>
       </div>
     </main>

@@ -1,6 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import police from "./newimg/police.jpg";
+import police1 from "./newimg/police1.jpg";
+import police2 from "./newimg/police2.webp";
+
+
+
 const PoliceCoaching = () => {
   return (
     <div className="container py-4">
@@ -21,7 +27,7 @@ const PoliceCoaching = () => {
       {/* Hero Section */}
       <div className="text-center mb-5">
         <h1 className="display-6 fw-bold mb-3">Police Exam Coaching</h1>
-        <img src="/images/topper-banner.jpg" alt="Topper Banner" className="img-fluid rounded shadow" />
+        <img src={police} alt="Topper Banner" className="img-fluid rounded shadow" />
         <p className="text-muted mt-2">
           Prepare confidently for roles like Police Constable and Sub-Inspector under expert guidance.
         </p>
@@ -30,7 +36,7 @@ const PoliceCoaching = () => {
       {/* Introduction */}
       <div className="mb-5">
         <p>
-          At Udhay Institute, we are committed to preparing students for prestigious roles in Tamil Nadu's police services. Whether you're targeting the TNUSRB Constable exam or aspiring for the Sub-Inspector post, our institute provides structured learning, physical training, and psychological preparedness.
+          At Udhay Welfare Institute, we are committed to preparing students for prestigious roles in Tamil Nadu's police services. Whether you're targeting the TNUSRB Constable exam or aspiring for the Sub-Inspector post, our institute provides structured learning, physical training, and psychological preparedness.
         </p>
         <p>
           Our expert-led modules are curated with updated syllabi in Tamil and English. Students get access to 100+ mock tests, physical drill sessions, group discussion training, and confidence-building workshops.
@@ -40,7 +46,7 @@ const PoliceCoaching = () => {
       {/* Physical Training Image */}
       <div className="text-center mb-5">
         <img
-          src="/images/physical-training.jpg"
+          src={police1}
           alt="Physical Training"
           className="img-fluid rounded shadow"
           style={{ maxWidth: '800px' }}
@@ -89,7 +95,7 @@ const PoliceCoaching = () => {
           Here’s how the recruitment process works under TNUSRB:
         </p>
         <img
-          src="/images/organization-chart.png"
+          src={police2}
           alt="TNUSRB Chart"
           className="img-fluid rounded shadow mb-4"
           style={{ maxWidth: '600px' }}
@@ -110,15 +116,16 @@ const PoliceCoaching = () => {
       <div className="bg-primary bg-opacity-10 p-5 rounded text-center shadow mb-5">
         <h3 className="fw-bold text-primary">"Serve with Pride, Enforce with Integrity"</h3>
         <p className="text-muted mt-2 mb-4">
-          Join Udhay Institute today and transform into a proud police officer. With our expert coaching and real-world training, your dream is within reach.
+          Join Udhay Welfare Institute today and transform into a proud police officer. With our expert coaching and real-world training, your dream is within reach.
         </p>
-        <img
+        {/* <img
           src="/images/motivation-banner.jpg"
           alt="Motivation"
           className="img-fluid rounded shadow"
           style={{ maxWidth: '800px' }}
-        />
-        <p className="mt-3 fw-semibold text-success">🎯 First demo class is FREE – Book your slot now!</p>
+        /> */}
+      <p className="mt-3 fw-semibold text-success">🎯 All classes are completely FREE – Start learning today!</p>
+
       </div>
 
       {/* Testimonials */}
@@ -152,7 +159,7 @@ const PoliceCoaching = () => {
           <div className="col-md-6">
             <div className="card shadow-sm h-100 border-start border-4 border-danger">
               <div className="card-body">
-                <p className="card-text text-muted">"From applying online to preparing for PET, Udhay Institute guided me in every step. Thank you!"</p>
+                <p className="card-text text-muted">"From applying online to preparing for PET, Udhay Welfare Institute guided me in every step. Thank you!"</p>
                 <h6 className="mt-3 text-danger">– Karthika, Selected SI</h6>
               </div>
             </div>

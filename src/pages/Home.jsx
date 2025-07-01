@@ -63,9 +63,9 @@
 //               viewport={{ once: true }}
 //               transition={{ duration: 0.8 }}
 //             >
-//               <h2 className="fw-bold text-uppercase">About Udhay Institute</h2>
+//               <h2 className="fw-bold text-uppercase">AboutUdhay Welfare Institute</h2>
 //               <p className="mt-3">
-//                 Udhay Institute is a visionary education platform backed by the
+//                Udhay Welfare Institute is a visionary education platform backed by the
 //                 Tamil Nadu Government. Our mission is to provide job-ready
 //                 training in IT, English, soft skills, and technical fields
 //                 completely free of cost.
@@ -170,13 +170,32 @@
 
 // export default Home;
 
-
-
-
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import 'aos/dist/aos.css';
-import AOS from 'aos';
+import "aos/dist/aos.css";
+import AOS from "aos";
+
+import homeimg from "../assets/images/banner/home.jpg";
+import aboutimg from "../assets/images/about/about-us.jpg";
+
+// course img
+
+import placementImg from "../assets/img/placement and training.jpg";
+import competitiveImg from "../assets/img/competative exams.jpeg";
+
+import itTrainingImg from "../assets/img/computer and it training.webp";
+import spokenImg from "../assets/img/spoken english.jpeg";
+
+import careerImg from "../assets/img/currier guidence.jpg";
+import typingToolsImg from "../assets/img/typewritting.jpeg";
+
+import hrTrainingImg from "../assets/img/hr internship.jpeg";
+import industrialVisitImg from "../assets/img/industrial visit program1.jpg";
+
+import govtExamImg from "../assets/img/workshops.jpeg";
+
+
+
 
 const Home = () => {
   // Initialize AOS animations
@@ -184,56 +203,45 @@ const Home = () => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
-  const courses = [
-    "Placement and Training",
-    "Coaching for Competitive Exams",
-    "Computer and IT Training",
-    "Spoken English",
-    "Career Guidance",
-    "Technical Training: Typing & Office Tools",
-    "HR Internship/Training",
-    "Industrial Visit Planning Program",
-    "Workshops for Govt Exams",
-  ];
+const courses = [
+  { title: "Placement and Training", img: placementImg },
+  { title: "Coaching for Competitive Exams", img: competitiveImg },
+  { title: "Computer and IT Training", img: itTrainingImg },
+  { title: "Spoken English", img: spokenImg },
+  { title: "Career Guidance", img: careerImg },
+  { title: "Technical Training: Typing & Office Tools", img: typingToolsImg },
+  { title: "HR Internship/Training", img: hrTrainingImg },
+  { title: "Industrial Visit Planning Program", img: industrialVisitImg },
+  { title: "Workshops for Govt Exams", img: govtExamImg },
+];
+
 
   return (
     <>
-      {/* Hero Section */}
-      <section
-        className="text-dark d-flex align-items-center"
-        style={{
-          backgroundImage: "url('/assets/banner.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          minHeight: "90vh",
-        }}
-        data-aos="fade-right"
-      >
-        <div className="container py-5">
-          <div className="col-md-8" data-aos="fade-up" data-aos-delay="200">
-            <h1 className="display-4 fw-bold mb-4">
-              Empowering Youth with Free Education
-            </h1>
-            <p className="lead mb-4">
-              A Government initiative inspired by Thiru. Udhayanidhi Stalin,
-              offering 100% free online courses to every aspiring student in
-              Tamil Nadu. Unlock your career path today.
-            </p>
-            <Link to="/courses" className="btn btn-lg btn-danger shadow px-4" data-aos="zoom-in" data-aos-delay="400">
-              Start Learning for Free
-            </Link>
-          </div>
-        </div>
-      </section>
+  
+{/* Hero Section */}
+<section className="d-flex align-items-center h-100" data-aos="fade-right">
+  <img
+    src={homeimg}
+    alt="Free Bank Exam Coaching"
+    className="img-fluid w-100"
+    style={{ maxHeight: '130vh', objectFit: 'cover' }}
+  />
+</section>
+
+
+  {/* No content inside — just background image */}
+
+
 
       {/* About Section */}
       <section className="py-5 bg-light">
         <div className="container">
           <div className="row align-items-center g-5">
             <div className="col-md-6" data-aos="fade-right">
-              <h2 className="fw-bold text-uppercase">About Udhay Institute</h2>
+              <h2 className="fw-bold text-uppercase">About Udhay Welfare Institute</h2>
               <p className="mt-3">
-                Udhay Institute is a visionary education platform backed by the
+               Udhay Welfare Institute is a visionary education platform backed by the
                 Tamil Nadu Government. Our mission is to provide job-ready
                 training in IT, English, soft skills, and technical fields
                 completely free of cost.
@@ -253,9 +261,13 @@ const Home = () => {
               </Link>
             </div>
 
-            <div className="col-md-6 text-center" data-aos="zoom-in" data-aos-delay="300">
+            <div
+              className="col-md-6 text-center"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
               <img
-                src="/assets/about-image.png"
+                src={aboutimg}
                 alt="About"
                 className="img-fluid rounded shadow"
               />
@@ -264,7 +276,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Courses Section */}
+      {/* course  */}
       <section className="py-5">
         <div className="container">
           <div className="d-flex justify-content-between align-items-center mb-4">
@@ -281,7 +293,7 @@ const Home = () => {
             </Link>
           </div>
           <div className="row g-4">
-            {courses.map((title, index) => (
+            {courses.map((course, index) => (
               <div
                 className="col-md-4"
                 key={index}
@@ -290,14 +302,18 @@ const Home = () => {
               >
                 <div className="card h-100 border-0 shadow-sm hover-shadow">
                   <img
-                    src={`/assets/courses/course${index + 1}.jpg`}
-                    alt={title}
+                    src={course.img}
+                    alt={course.title}
                     className="card-img-top"
                     style={{ height: "220px", objectFit: "cover" }}
                   />
                   <div className="card-body d-flex flex-column justify-content-between">
-                    <h5 className="card-title fw-bold">{title}</h5>
-                    <button className="btn btn-danger mt-3 w-100" data-aos="zoom-in" data-aos-delay="200">
+                    <h5 className="card-title fw-bold">{course.title}</h5>
+                    <button
+                      className="btn btn-danger mt-3 w-100"
+                      data-aos="zoom-in"
+                      data-aos-delay="200"
+                    >
                       Apply Now
                     </button>
                   </div>
@@ -309,10 +325,17 @@ const Home = () => {
       </section>
 
       {/* Join Our Team */}
-      <section className="py-5 bg-danger text-white text-center" data-aos="fade-up">
+      <section
+        className="py-5 bg-danger text-white text-center"
+        data-aos="fade-up"
+      >
         <div className="container">
           <h3 className="fw-bold mb-3">Click the button to Join our Team</h3>
-          <button className="btn btn-outline-light btn-lg" data-aos="zoom-in" data-aos-delay="200">
+          <button
+            className="btn btn-outline-light btn-lg"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
             Join Now
           </button>
         </div>

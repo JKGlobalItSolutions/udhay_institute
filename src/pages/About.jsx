@@ -1,34 +1,30 @@
-import React from "react";
+import React from "react"; 
 import { motion } from "framer-motion";
+
+// import homeimg from "../assets/images/banner/banner-1.jpg";
+// import about from "../assets/images/about/about-page.jpg"; 
+
+
+import home from "../assets/images/banner/our courses.jpg";
 
 const About = () => {
   return (
     <>
       {/* Hero Section */}
       <motion.section
-        className="text-dark d-flex align-items-center"
-        style={{
-          backgroundImage: "url('/assets/banner.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          minHeight: "300px",
-        }}
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="container">
-          <h2 className="fw-bold">About Us</h2>
-          <p className="lead mt-2" style={{ maxWidth: "750px" }}>
-            Empowering the youth of Tamil Nadu with quality education, skill development, and placement-driven training —
-            all at zero cost. This platform stands as a proud initiative inspired by Hon'ble Thiru. Udhayanidhi Stalin,
-            Deputy Chief Minister of Tamil Nadu.
-          </p>
-        </div>
+   className="d-flex align-items-center h-100" data-aos="fade-right">
+        <img
+         src={home}
+          alt="Free Bank Exam Coaching"
+          className="img-fluid w-100"
+          style={{ maxHeight: '130vh', objectFit: 'cover' }}
+        />
+     
       </motion.section>
 
       {/* Introduction Section */}
-      <section className="py-5 bg-white">
+
+      {/* <section className="py-5 bg-white">
         <div className="container d-flex flex-column flex-md-row align-items-center gap-5">
           <motion.div
             className="col-md-6"
@@ -38,7 +34,7 @@ const About = () => {
             viewport={{ once: true }}
           >
             <img
-              src="/assets/about-student.jpg"
+              src={about}
               alt="Our Journey"
               className="img-fluid rounded shadow"
             />
@@ -52,7 +48,7 @@ const About = () => {
           >
             <h3 className="fw-bold text-uppercase mb-3">Our Journey</h3>
             <p>
-              <strong>Udhay Institute</strong> was born from a vision to bridge the gap between education and employment.
+              <strong>Udhay Welfare Institute</strong> was born from a vision to bridge the gap between education and employment.
               We proudly follow the mission set forth by Thiru. Udhayanidhi Stalin — to offer high-quality education to
               every aspiring youth, especially in rural and underprivileged areas of Tamil Nadu.
             </p>
@@ -62,7 +58,17 @@ const About = () => {
             </p>
           </motion.div>
         </div>
-      </section>
+      </section> */}
+
+
+      {/* <section className="d-flex align-items-center h-100" data-aos="fade-right">
+        <img
+          src={home}
+          alt="Free Bank Exam Coaching"
+          className="img-fluid w-100"
+          style={{ maxHeight: '130vh', objectFit: 'cover' }}
+        />
+      </section> */}
 
       {/* Mission / Vision / Stats */}
       <section className="py-5 bg-light">

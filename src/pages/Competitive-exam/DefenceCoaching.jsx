@@ -1,5 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import defence from "./newimg/defence.jpg";
+import defence1 from "./newimg/defence1.webp";
+import defence2 from "./newimg/defence2.jpg";
+
 
 const DefenceCoaching = () => {
   return (
@@ -19,14 +23,14 @@ const DefenceCoaching = () => {
       {/* Hero Section */}
       <div className="text-center mb-5">
         <h1 className="display-6 fw-bold mb-3">Join the Forces, Serve the Nation</h1>
-        <img src="/images/defence-banner.jpg" alt="Defence Banner" className="img-fluid rounded shadow" />
-        <p className="text-muted mt-2">Crack Army, Navy, and Air Force exams with expert-led coaching at Udhay Institute.</p>
+        <img src={defence} alt="Defence Banner" className="img-fluid rounded shadow" />
+        <p className="text-muted mt-2">Crack Army, Navy, and Air Force exams with expert-led coaching at Udhay Welfare Institute.</p>
       </div>
 
       {/* Introduction */}
       <div className="mb-5">
         <p>
-          Udhay Institute provides comprehensive coaching for Indian Army (GD/Tech/Clerk), Navy (SSR, MR), and Air Force (Group X & Y) exams. We empower aspirants with the right physical training, academic prep, and interview readiness.
+          Udhay Welfare Institute provides comprehensive coaching for Indian Army (GD/Tech/Clerk), Navy (SSR, MR), and Air Force (Group X & Y) exams. We empower aspirants with the right physical training, academic prep, and interview readiness.
         </p>
         <p>
           Courses are offered in Tamil and English, and include mock tests, NDA/CDS crash courses, SSB interview prep, and personalized mentoring.
@@ -36,10 +40,10 @@ const DefenceCoaching = () => {
       {/* Physical Training Image */}
       <div className="text-center mb-5">
         <img
-          src="/images/defence-training.jpg"
+          src={defence1}
           alt="Defence Physical Training"
-          className="img-fluid rounded shadow"
-          style={{ maxWidth: '800px' }}
+          className="img-fluid rounded shadow w-50"
+         
         />
         <p className="text-muted mt-2">Train like a soldier — fitness routines tailored to Army/Navy/Air Force selection standards</p>
       </div>
@@ -84,7 +88,7 @@ const DefenceCoaching = () => {
         <h4 className="fw-bold mb-3">Defence Recruitment Process Flow</h4>
         <p className="text-muted mb-4">Step-by-step selection process followed by Army, Navy & Air Force boards:</p>
         <img
-          src="/images/defence-flowchart.png"
+          src={defence2}
           alt="Defence Flowchart"
           className="img-fluid rounded shadow mb-4"
           style={{ maxWidth: '600px' }}
@@ -104,14 +108,9 @@ const DefenceCoaching = () => {
       <div className="bg-primary bg-opacity-10 p-5 rounded text-center shadow mb-5">
         <h3 className="fw-bold text-primary">"Touch the Sky with Glory – Serve the Nation with Honour"</h3>
         <p className="text-muted mt-2 mb-4">
-          Udhay Institute turns your dream into duty. Our all-in-one training model empowers every defence aspirant to rise above competition.
+          Udhay Welfare Institute turns your dream into duty. Our all-in-one training model empowers every defence aspirant to rise above competition.
         </p>
-        <img
-          src="/images/defence-motivation.jpg"
-          alt="Motivation"
-          className="img-fluid rounded shadow"
-          style={{ maxWidth: '800px' }}
-        />
+        
         <p className="mt-3 fw-semibold text-success">🇮🇳 Join now — Limited seats in Defence Coaching 2025 batch!</p>
       </div>
 

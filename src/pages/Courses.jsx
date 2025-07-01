@@ -3,48 +3,58 @@ import { Link } from 'react-router-dom';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 
+import homeimg from "../assets/images/banner/our courses.jpg";
+
+// course img
+
+import placementImg from "../assets/img/placement and training.jpg";
+import competitiveImg from "../assets/img/competative exams.jpeg";
+
+import itTrainingImg from "../assets/img/computer and it training.webp";
+import spokenImg from "../assets/img/spoken english.jpeg";
+
+import careerImg from "../assets/img/currier guidence.jpg";
+import typingToolsImg from "../assets/img/typewritting.jpeg";
+
+import hrTrainingImg from "../assets/img/hr internship.jpeg";
+import industrialVisitImg from "../assets/img/industrial visit program1.jpg";
+
+import govtExamImg from "../assets/img/workshops.jpeg";
+
+
+
 const Courses = () => {
   // Initialize AOS animations
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
-  const courses = [
-    "Placement and Training",
-    "Coaching for Competitive Exams",
-    "Computer and IT Training",
-    "Spoken English",
-    "Career Guidance",
-    "Technical Training: Typing, Etc.",
-    "HR Internship/Training",
-    "Industrial Visit Planning Program",
-    "Workshop for Various Programs"
-  ];
+ 
+ const courses = [
+   { title: "Placement and Training", img: placementImg },
+   { title: "Coaching for Competitive Exams", img: competitiveImg },
+   { title: "Computer and IT Training", img: itTrainingImg },
+   { title: "Spoken English", img: spokenImg },
+   { title: "Career Guidance", img: careerImg },
+   { title: "Technical Training: Typing & Office Tools", img: typingToolsImg },
+   { title: "HR Internship/Training", img: hrTrainingImg },
+   { title: "Industrial Visit Planning Program", img: industrialVisitImg },
+   { title: "Workshops for Govt Exams", img: govtExamImg },
+ ];
+ 
 
   return (
     <>
       {/* Hero Section */}
-      <section
-        className="text-dark d-flex align-items-center"
-        style={{
-          backgroundImage: "url('/assets/banner.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          minHeight: "300px",
-        }}
-        data-aos="fade-down"
-      >
-        <div className="container">
-          <div className="col-md-8" data-aos="fade-up" data-aos-delay="200">
-            <h2 className="display-6 fw-bold">Our Courses</h2>
-            <p className="mt-3">
-              Embarking on the journey towards a brighter future is a shared endeavor, one where collective
-              efforts and visionary thinking pave the way for progress. At Udhay Institute, we are committed to
-              this mission wholeheartedly — dedicated to igniting the flame of potential in every individual.
-            </p>
-          </div>
-        </div>
-      </section>
+   <section className="d-flex align-items-center h-100" data-aos="fade-right">
+  <img
+    src={homeimg}
+    alt="Free Bank Exam Coaching"
+    className="img-fluid w-100"
+    style={{ maxHeight: '130vh', objectFit: 'cover' }}
+  />
+</section>
+
 
       {/* Courses List */}
       <section
@@ -65,29 +75,26 @@ const Courses = () => {
           </div>
 
           <div className="row g-4">
-            {courses.map((title, index) => (
+           {courses.map((course, index) => (
               <div
-                className="col-12 col-sm-6 col-lg-4"
+                className="col-md-4"
                 key={index}
                 data-aos="fade-up"
-                data-aos-delay={`${index * 100}`}
+                data-aos-delay={`${100 * index}`}
               >
-                <div className="card border-0 shadow-sm h-100">
+                <div className="card h-100 border-0 shadow-sm hover-shadow">
                   <img
-                    src={`/assets/courses/course${index + 1}.jpg`}
-                    alt={title}
+                    src={course.img}
+                    alt={course.title}
                     className="card-img-top"
-                    style={{ height: '220px', objectFit: 'cover' }}
-                    onError={(e) => { e.target.src = "/assets/courses/default.jpg"; }}
-                    data-aos="zoom-in"
-                    data-aos-delay="300"
+                    style={{ height: "220px", objectFit: "cover" }}
                   />
-                  <div className="card-body d-flex flex-column" data-aos="fade-up" data-aos-delay="400">
-                    <h5 className="fw-bold mb-3">{title}</h5>
+                  <div className="card-body d-flex flex-column justify-content-between">
+                    <h5 className="card-title fw-bold">{course.title}</h5>
                     <button
-                      className="btn btn-danger mt-auto w-100"
+                      className="btn btn-danger mt-3 w-100"
                       data-aos="zoom-in"
-                      data-aos-delay="500"
+                      data-aos-delay="200"
                     >
                       Apply Now
                     </button>

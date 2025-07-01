@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaGithub, FaInstagram, FaArrowUp } from 'react-icons/fa';
-
+ import logo from "../assets/images/logo.jpg";
 const Footer = () => {
   return (
     <footer className="bg-dark text-light pt-5 pb-4 position-relative">
@@ -11,8 +11,8 @@ const Footer = () => {
           {/* Left: Logo & Info */}
           <div className="col-md-8 mb-3">
             <img
-              src="/assets/logo.png"
-              alt="JK Logo"
+              src={logo}
+              alt='logo'
               style={{ width: '80px', borderRadius: '50%', marginBottom: '10px' }}
             />
             <p className="mt-3 mb-1">phone:</p>

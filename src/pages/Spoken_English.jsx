@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import homeimg from "../assets/images/banner/ser 5.jpg";
+
 const Spoken_English = () => {
   return (
-    <main className="container-fluid mt-5">
+    <main className="container-fluid">
       {/* Breadcrumb */}
       <div className="bread">
         <nav
           aria-label="breadcrumb"
-          style={{ marginTop: '100px' }}
+          style={{ marginTop: '00px' }}
           className="bg-light p-4"
         >
           <h2 className="container">Spoken English</h2>
@@ -19,16 +21,34 @@ const Spoken_English = () => {
         </nav>
       </div>
 
+
+
+
+
+    {/* Banner Image */}
+              <div className="container-fluid my-4">
+                <img
+                  src={homeimg}
+                  alt="Computer and IT Training"
+                  className="img-fluid rounded shadow-sm w-100"
+                  style={{ maxHeight: "400px", objectFit: "cover" }}
+                />
+              </div>
+
+
+
+
+
       {/* Content */}
       <div className="container maincontent mt-4">
-        <h3 className="pt-3">Welcome to Udhay  Institute: Mastering Spoken English for Professional Success</h3>
+        <h3 className="pt-3">Welcome to Udhay Welfare Institute: Mastering Spoken English for Professional Success</h3>
         <p>
-          Welcome to Udhay  Institute, your gateway to mastering the art of spoken English and seizing lucrative career opportunities. At Udhay  Institute, we understand the pivotal role that effective communication plays in shaping your professional journey.
+          Welcome to Udhay Welfare Institute, your gateway to mastering the art of spoken English and seizing lucrative career opportunities. At Udhay Welfare Institute, we understand the pivotal role that effective communication plays in shaping your professional journey.
         </p>
 
-        <h4>About Udhay  Institute:</h4>
+        <h4>About Udhay Welfare Institute:</h4>
         <p>
-          Udhay  Institute stands as a beacon of excellence in the realm of spoken English coaching. With a legacy of empowering individuals to communicate with clarity and confidence, our expert team nurtures talent and fosters growth.
+          Udhay Welfare Institute stands as a beacon of excellence in the realm of spoken English coaching. With a legacy of empowering individuals to communicate with clarity and confidence, our expert team nurtures talent and fosters growth.
         </p>
 
         <h4>Placement Services:</h4>
@@ -50,7 +70,7 @@ const Spoken_English = () => {
           <li><b>Continuous Support:</b> Post-course mentorship and learning support.</li>
         </ul>
 
-        <h6>Why Choose Udhay  Institute?</h6>
+        <h6>Why Choose Udhay Welfare Institute?</h6>
         <ul className="ps-3">
           <li><b>Unparalleled Expertise:</b> A legacy of proven results in English coaching.</li>
           <li><b>Individualized Attention:</b> One-on-one mentoring and personalized learning.</li>
@@ -59,14 +79,14 @@ const Spoken_English = () => {
           <li><b>Holistic Development:</b> Develop communication, confidence, and mindset together.</li>
         </ul>
 
-        <h4 className="pt-3">Embark on Your Journey to Success with Udhay  Institute:</h4>
+        <h4 className="pt-3">Embark on Your Journey to Success with Udhay Welfare Institute:</h4>
         <p>
           Ready to transform your spoken English and professional future? Connect with us today and explore training programs tailored to your career ambitions.
         </p>
 
         <h4 className="pt-3">Conclusion:</h4>
         <p>
-          Udhay  Institute is more than just a coaching center – we are your growth partners. Break language barriers, boost confidence, and build your professional path with us.
+          Udhay Welfare Institute is more than just a coaching center – we are your growth partners. Break language barriers, boost confidence, and build your professional path with us.
         </p>
       </div>
     </main>

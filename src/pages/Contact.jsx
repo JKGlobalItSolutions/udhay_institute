@@ -3,6 +3,9 @@ import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import homeimg from "../assets/images/banner/Contact Us.jpg";
+
+
 const Contact = () => {
   const form = useRef();
   const [success, setSuccess] = useState(null);
@@ -31,7 +34,7 @@ const Contact = () => {
   return (
     <>
       {/* Hero Banner */}
-      <motion.section
+      {/* <motion.section
         className="text-white d-flex align-items-center"
         style={{
           backgroundImage: "url('/assets/banner.jpg')",
@@ -49,7 +52,17 @@ const Contact = () => {
             We’re here to help! Send us a message or contact us via WhatsApp.
           </p>
         </div>
-      </motion.section>
+      </motion.section> */}
+
+<section className="d-flex align-items-center h-100" data-aos="fade-right">
+  <img
+    src={homeimg}
+    alt="Free Bank Exam Coaching"
+    className="img-fluid w-100"
+    style={{ maxHeight: '130vh', objectFit: 'cover' }}
+  />
+</section>
+
 
       {/* Contact Form */}
       <motion.section

@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import homeimg from "../assets/images/banner/ser 2.jpg";
+
 const Placement_and_Training = () => {
   return (
-    <main className="container-fluid mt-5">
+    <main className="container-fluid ">
       {/* Breadcrumb Navigation */}
       <nav aria-label="breadcrumb" className="bg-light p-4 rounded">
         <h2 className="text-primary">Placement and Training</h2>
@@ -16,6 +18,18 @@ const Placement_and_Training = () => {
           </li>
         </ol>
       </nav>
+
+
+  {/* Banner Image */}
+  <div className="container-fluid my-4">
+    <img
+      src={homeimg}
+      alt="Computer and IT Training"
+      className="img-fluid rounded shadow-sm w-100"
+      style={{ maxHeight: "400px", objectFit: "cover" }}
+    />
+  </div>
+
 
       {/* Main Content */}
       <div className="container  maincontent py-4">

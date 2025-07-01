@@ -1,4 +1,5 @@
 import React from 'react'
+import homeimg from "../assets/images/banner/ser 7.jpg";
 
 const Workshop_for_various_programs = () => {
   return (
@@ -19,18 +20,35 @@ const Workshop_for_various_programs = () => {
     </nav>
   </div>
 
+
+
+
+
+  {/* Banner Image */}
+              <div className="container-fluid my-4">
+                <img
+                  src={homeimg}
+                  alt="Computer and IT Training"
+                  className="img-fluid rounded shadow-sm w-100"
+                  style={{ maxHeight: "400px", objectFit: "cover" }}
+                />
+              </div>
+
+
+
+
   <div className="container mt-4">
     <div className="maincontent">
-      <h3 className="pt-3">Welcome to Udhay  Institute: Your Gateway to Industrial Exploration and Career Advancement</h3>
+      <h3 className="pt-3">Welcome to Udhay Welfare Institute: Your Gateway to Industrial Exploration and Career Advancement</h3>
       <p>
-        Welcome to Udhay  Institute, where we specialize in organizing enriching industrial visit programs and workshops for college students.
+        Welcome to Udhay Welfare Institute, where we specialize in organizing enriching industrial visit programs and workshops for college students.
         With a commitment to providing hands-on learning experiences and fostering career development, we aim to inspire the next generation
         of professionals and equip them with the skills and knowledge needed to succeed in today's competitive job market.
       </p>
 
       <h4>Our Mission</h4>
       <p>
-        At Udhay  Institute, our mission is to bridge the gap between academia and industry by offering immersive industrial visit programs and workshops
+        At Udhay Welfare Institute, our mission is to bridge the gap between academia and industry by offering immersive industrial visit programs and workshops
         that expose students to real-world applications of their academic knowledge. We strive to instill a passion for lifelong learning and empower
         students to make informed career decisions that align with their interests and aspirations.
       </p>
@@ -64,13 +82,13 @@ const Workshop_for_various_programs = () => {
 
       <h4 className="p-2">Placement Assistance</h4>
       <p>
-        At Udhay  Institute, we understand the importance of securing meaningful employment after completing your education. That's why we offer
+        At Udhay Welfare Institute, we understand the importance of securing meaningful employment after completing your education. That's why we offer
         comprehensive placement assistance services to help connect our students with internship opportunities, entry-level positions,
         and career advancement opportunities. Our dedicated placement team works closely with industry partners to identify job openings,
         match qualified candidates with suitable positions, and provide ongoing support throughout the recruitment process.
       </p>
 
-      <h6>Why Choose Udhay  Institute?</h6>
+      <h6>Why Choose Udhay Welfare Institute?</h6>
       <ul className="orderedlist p-2">
         <li>
           <b>Industry Partnerships:</b> Benefit from our extensive network of industry partners, allowing you to gain valuable exposure to leading companies and organizations in various sectors.
@@ -89,8 +107,8 @@ const Workshop_for_various_programs = () => {
       <h4 className="p-2">Get Started Today!</h4>
       <p>
         Ready to embark on an exciting journey of industrial exploration and career advancement?
-        Contact Udhay  Institute today to learn more about our industrial visit programs, workshops, and placement assistance services.
-        Empower your future with Udhay  Institute and take the first step towards a rewarding and fulfilling career!
+        Contact Udhay Welfare Institute today to learn more about our industrial visit programs, workshops, and placement assistance services.
+        Empower your future with Udhay Welfare Institute and take the first step towards a rewarding and fulfilling career!
       </p>
     </div>
   </div>
