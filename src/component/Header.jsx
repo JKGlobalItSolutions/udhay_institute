@@ -45,7 +45,7 @@ const Header = () => {
               <Link className="nav-link fw-bold text-white" to="/">HOME</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link fw-bold text-white" to="/courses">COURSES</Link>
+              <Link className="nav-link fw-bold text-white" to="/courses">apply</Link>
             </li>
 
             {/* Pages with nested submenu */}
@@ -56,7 +56,7 @@ const Header = () => {
                 role="button"
                 data-bs-toggle="dropdown"
               >
-                PAGES
+              COURSES
               </a>
 
               <ul className="dropdown-menu">
