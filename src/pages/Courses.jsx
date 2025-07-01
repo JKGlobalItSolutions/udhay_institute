@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
@@ -29,6 +29,11 @@ const Courses = () => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
+
+
+ const [showModal, setShowModal] = useState(false);
+  const [selectedCourse, setSelectedCourse] = useState("");
+
  
  const courses = [
    { title: "Placement and Training", img: placementImg },
@@ -43,6 +48,44 @@ const Courses = () => {
  ];
  
 
+
+ const handleApplyClick = (courseName) => {
+    setSelectedCourse(courseName);
+    setShowModal(true);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const formData = {
+      course: form.course.value,
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+    };
+
+    emailjs
+      .send(
+        "your_service_id",     // ✅ Replace with your EmailJS Service ID
+        "your_template_id",    // ✅ Replace with your Template ID
+        formData,
+        "your_public_key"      // ✅ Replace with your Public Key
+      )
+      .then(() => {
+        alert(`Successfully applied for ${formData.course}`);
+        setShowModal(false);
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        alert("Failed to send the application. Please try again.");
+      });
+  };
+
+
+
+
   return (
     <>
       {/* Hero Section */}
@@ -56,26 +99,17 @@ const Courses = () => {
 </section>
 
 
-      {/* Courses List */}
-      <section
-        className="py-5 bg-light"
-        data-aos="fade-up"
-      >
+      {/* Courses */}
+      <section className="py-5">
         <div className="container">
           <div className="d-flex justify-content-between align-items-center mb-4">
-            <h3 className="fw-bold text-dark" data-aos="fade-down">Our Courses</h3>
-            <Link
-              to="/"
-              className="btn btn-outline-warning"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              Back to Home
+            <h3 className="fw-bold text-dark" data-aos="fade-down">Popular Free Courses</h3>
+            <Link to="/courses" className="btn btn-dark border-1" data-aos="fade-up" data-aos-delay="200">
+              View All
             </Link>
           </div>
-
           <div className="row g-4">
-           {courses.map((course, index) => (
+            {courses.map((course, index) => (
               <div
                 className="col-md-4"
                 key={index}
@@ -95,6 +129,7 @@ const Courses = () => {
                       className="btn btn-danger mt-3 w-100"
                       data-aos="zoom-in"
                       data-aos-delay="200"
+                      onClick={() => handleApplyClick(course.title)}
                     >
                       Apply Now
                     </button>
@@ -105,6 +140,106 @@ const Courses = () => {
           </div>
         </div>
       </section>
+
+
+
+
+
+  {/* Modal Form */}
+{showModal && (
+  <div
+    className="modal show fade d-block"
+    tabIndex="-1"
+    role="dialog"
+    style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+  >
+    <div className="modal-dialog modal-dialog-centered" role="document">
+      <div className="modal-content">
+        <form onSubmit={handleSubmit}>
+          <div className="modal-header">
+            <h5 className="modal-title">Apply for {selectedCourse}</h5>
+            <button
+              type="button"
+              className="btn-close"
+              onClick={() => setShowModal(false)}
+            ></button>
+          </div>
+          <div className="modal-body">
+            {/* Course Dropdown */}
+            <div className="mb-3">
+              <label className="form-label">Select Course</label>
+              <select
+                name="course"
+                className="form-select"
+                defaultValue={selectedCourse}
+                required
+              >
+                <option value="">-- Select a course --</option>
+                <option value="Placement and Training">Placement and Training</option>
+                <option value="Coaching for Competitive Exams">Coaching for Competitive Exams</option>
+                <option value="Computer and IT Training">Computer and IT Training</option>
+                <option value="Spoken English">Spoken English</option>
+                <option value="Career Guidance">Career Guidance</option>
+                <option value="Typing & Office Tools">Typing & Office Tools</option>
+                <option value="HR Internship/Training">HR Internship/Training</option>
+                <option value="Industrial Visit Program">Industrial Visit Program</option>
+                <option value="Workshops for Govt Exams">Workshops for Govt Exams</option>
+              </select>
+            </div>
+
+            {/* Name */}
+            <div className="mb-3">
+              <label className="form-label">Name</label>
+              <input
+                type="text"
+                name="name"
+                required
+                className="form-control"
+              />
+            </div>
+
+            {/* Email */}
+            <div className="mb-3">
+              <label className="form-label">Email</label>
+              <input
+                type="email"
+                name="email"
+                required
+                className="form-control"
+              />
+            </div>
+
+            {/* Phone */}
+            <div className="mb-3">
+              <label className="form-label">Phone</label>
+              <input
+                type="tel"
+                name="phone"
+                required
+                className="form-control"
+              />
+            </div>
+          </div>
+
+          {/* Footer */}
+          <div className="modal-footer">
+            <button type="submit" className="btn btn-success">
+              Submit Application
+            </button>
+            <button
+              type="button"
+              className="btn btn-secondary"
+              onClick={() => setShowModal(false)}
+            >
+              Close
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+)}
+
     </>
   );
 };

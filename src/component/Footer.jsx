@@ -21,12 +21,12 @@ const Footer = () => {
               Tiruvannamalai, Tamil Nadu 606604
             </p>
             <p>Email: +91 84384 38413</p>
-            <p>Address: contact@jkinstitute.com</p>
+            <p>Address: contact@Udhay Welfare Institute.com</p>
           </div>
 
           {/* Right: Links */}
           <div className="col-md-4">
-            <h5 className="fw-bold">COMPANY</h5>
+            <h5 className="fw-bold text-light">COMPANY</h5>
             <ul className="list-unstyled mt-3">
               <li>
                 <Link to="/about" className="text-light text-decoration-none">About Us</Link>
@@ -41,7 +41,7 @@ const Footer = () => {
         {/* Bottom Row */}
         <hr className="border-secondary" />
         <div className="d-flex justify-content-between align-items-center">
-          <small>Copyright © 2025, designed & developed by <span className="text-info">jkglobalitsolutions</span></small>
+          <small>Copyright © 2025, designed & developed by <span className="text-info">Udhay Welfare Institute</span></small>
           <div className="d-flex gap-3">
             <a href="#" className="text-warning"><FaFacebookF /></a>
             <a href="#" className="text-warning"><FaTwitter /></a>
