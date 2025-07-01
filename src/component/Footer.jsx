@@ -8,7 +8,7 @@ import {
   FaArrowUp,
 } from "react-icons/fa";
 
-import logo from "../assets/images/logo.jpg";
+import logo from "../assets/images/banner/udhay.jpg";
 import adminpic from "../assets/images/banner/adminpic.jpg";
 const Footer = () => {
   return (
@@ -22,8 +22,8 @@ const Footer = () => {
                 src={logo}
                 alt="logo"
                 style={{
-                  width: "120px",
-                  borderRadius: "50%",
+                  width: "150px",
+                  borderRadius: "10%",
                   marginBottom: "10px",
                 }}
               />
@@ -39,14 +39,26 @@ const Footer = () => {
             </div>
 
             <div className="mt-4">
-              <p className="fw-bold mb-1">Phone:</p>
-              <p>+91 79044 09070</p>
+              <div className="mb-3">
+                <p className="fw-bold text-info mb-1">📞 Phone:</p>
+                <p className="text-light mb-2" style={{ fontSize: "15px" }}>
+                  +91 79044 09070
+                </p>
+              </div>
 
-              <p className="fw-bold mb-1">Email:</p>
-              <p>contact@udhaywelfareinstitute.com</p>
+              <div className="mb-3">
+                <p className="fw-bold text-info mb-1">📧 Email:</p>
+                <p className="text-light mb-2" style={{ fontSize: "15px" }}>
+                  contact@udhaywelfareinstitute.com
+                </p>
+              </div>
 
-              <p className="fw-bold mb-1">Address:</p>
-              <p>Tiruvannamalai, Tamil Nadu 606604</p>
+              <div>
+                <p className="fw-bold text-info mb-1">📍 Address:</p>
+                <p className="text-light mb-0" style={{ fontSize: "15px" }}>
+                  Tiruvannamalai, Tamil Nadu 606604
+                </p>
+              </div>
             </div>
           </div>
 
@@ -93,7 +105,7 @@ const Footer = () => {
                   { label: "About Us", to: "/about" },
                   { label: "Contact", to: "/contact" },
                   { label: "Free Courses", to: "/courses" },
-                  { label: "Admission", to: "/admission" },
+                
                 ].map((link, idx) => (
                   <li key={idx} className="mb-2">
                     <Link
