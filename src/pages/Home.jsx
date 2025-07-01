@@ -338,7 +338,7 @@ const Home = () => {
           <h3 className="fw-bold mb-3">Click the button to Join our Team</h3>
           <Link to="/contact">
             <button
-              className="btn btn-outline-light btn-lg"
+              className="btn btn-light btn-lg rounded-3"
               data-aos="zoom-in"
               data-aos-delay="200"
             >
