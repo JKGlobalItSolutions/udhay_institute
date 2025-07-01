@@ -6,32 +6,54 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import homeimg from "../assets/images/banner/Contact Us.jpg";
 import adminpic from "../assets/images/banner/adminpic.jpg";
 
-
-
 const Contact = () => {
   const form = useRef();
   const [success, setSuccess] = useState(null);
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "your_service_id", // ✅ Replace this
-        "your_template_id", // ✅ Replace this
-        form.current,
-        "your_public_key" // ✅ Replace this
-      )
-      .then(
-        (result) => {
-          setSuccess("Message sent successfully!");
-          e.target.reset();
-        },
-        (error) => {
-          setSuccess("Failed to send message. Please try again.");
-        }
-      );
-  };
+  //   emailjs
+  //     .sendForm(
+  //       "service_udxx17d",     // ✅ Your EmailJS Service ID
+  //       "template_dkpumzg",    // ✅ Your EmailJS Template ID
+  //       form.current,          // ✅ Correct usage: form ref
+  //       "9MnDDro8K4jSJbxOK"    // ✅ Your Public Key
+  //     )
+  //     .then(
+  //       (result) => {
+  //         setSuccess("✅ Message sent successfully!");
+  //         e.target.reset();
+  //       },
+  //       (error) => {
+  //         setSuccess("❌ Failed to send message. Please try again.");
+  //         console.error(error);
+  //       }
+  //     );
+  // };
+
+ const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs
+    .sendForm(
+      "service_udxx17d",
+      "template_dkpumzg",
+      form.current,
+      "9MnDDro8K4jSJbxOK"
+    )
+    .then(
+      () => {
+        setSuccess("✅ Message sent successfully!");
+        e.target.reset();
+      },
+      (error) => {
+        console.error("EmailJS Error:", error);
+        setSuccess("❌ Failed to send message. Please try again.");
+      }
+    );
+};
+
 
   return (
     <>
@@ -91,7 +113,7 @@ const Contact = () => {
                 <div className="mb-3">
                   <input
                     type="text"
-                    name="user_name"
+                    name="name"
                     className="form-control"
                     placeholder="Your Name"
                     required
@@ -100,7 +122,7 @@ const Contact = () => {
                 <div className="mb-3">
                   <input
                     type="email"
-                    name="user_email"
+                    name="email"
                     className="form-control"
                     placeholder="Your Email"
                     required
@@ -109,16 +131,25 @@ const Contact = () => {
                 <div className="mb-3">
                   <input
                     type="text"
-                    name="subject"
+                    name="phone"
                     className="form-control"
-                    placeholder="Subject"
+                    placeholder="Your Phone"
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="text"
+                    name="course"
+                    className="form-control"
+                    placeholder="Course Applying For"
                     required
                   />
                 </div>
                 <div className="mb-4">
                   <textarea
                     name="message"
-                    className="form-control" 
+                    className="form-control"
                     rows="5"
                     placeholder="Your Message"
                     required
@@ -144,74 +175,74 @@ const Contact = () => {
               </form>
             </motion.div>
 
-{/* Contact Details */}
-<motion.div
-  className="col-md-5"
-  initial={{ x: 50, opacity: 0 }}
-  whileInView={{ x: 0, opacity: 1 }}
-  transition={{ duration: 0.6 }}
-  viewport={{ once: true }}
->
-  <h5 className="fw-bold mb-3">Need help?</h5>
-  <p className="text-muted">
-    Reach out anytime. We usually respond within 24–48 hours.
-  </p>
+            {/* Contact Details */}
+            <motion.div
+              className="col-md-5"
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h5 className="fw-bold mb-3">Need help?</h5>
+              <p className="text-muted">
+                Reach out anytime. We usually respond within 24–48 hours.
+              </p>
 
-  {/* Admin Info */}
-  <div className="d-flex align-items-center gap-3 mb-4 mt-4">
-    <img
-      src={adminpic} // import adminpic from '../assets/img/admin.jpg' or adjust accordingly
-      alt="Admin"
-      style={{
-        width: "200px",
-        height: "200px",
-        objectFit: "cover",
-        borderRadius: "30%",
-        border: "2px solid #ccc",
-      }}
-    />
-    <div>
-      <h6 className="mb-1 fw-bold">Er. Vignesh Gopinath</h6>
-      <p className="mb-1 text-muted">Founder</p>
-      <p className="mb-0 text-muted">Udhay Welfare Institute</p>
-      <p className="mb-0 text-muted">DMK Youth Wing</p>
-      <p className="mb-0 text-muted">Thiruvannamalai North, Polur</p>
-    </div>
-  </div>
+              {/* Admin Info */}
+              <div className="d-flex align-items-center gap-3 mb-4 mt-4">
+                <img
+                  src={adminpic} // import adminpic from '../assets/img/admin.jpg' or adjust accordingly
+                  alt="Admin"
+                  style={{
+                    width: "200px",
+                    height: "200px",
+                    objectFit: "cover",
+                    borderRadius: "30%",
+                    border: "2px solid #ccc",
+                  }}
+                />
+                <div>
+                  <h6 className="mb-1 fw-bold">Er. Vignesh Gopinath</h6>
+                  <p className="mb-1 text-muted">Founder</p>
+                  <p className="mb-0 text-muted">Udhay Welfare Institute</p>
+                  <p className="mb-0 text-muted">DMK Youth Wing</p>
+                  <p className="mb-0 text-muted">
+                    Thiruvannamalai North, Polur
+                  </p>
+                </div>
+              </div>
 
-  {/* Contact Details */}
-  <div className="mt-3">
-    <p>
-      <strong>📞 Phone:</strong> +91 79044 09070
-    </p>
-    <p>
-      <strong>📧 Email:</strong>{" "}
-      <a
-        href="mailto:contact@udhaywelfareinstitute.com"
-        className="text-decoration-none text-dark"
-      >
-        contact@udhaywelfareinstitute.com
-      </a>
-    </p>
-    <p>
-      <strong>📍 Address:</strong>
-      <br />
-      Thiruvannamalai North,<br />
-      Polur.
-    </p>
-    <a
-      href="https://wa.me/917904409070"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="btn btn-success mt-3"
-    >
-      💬 Chat on WhatsApp
-    </a>
-  </div>
-</motion.div>
-
-
-
+              {/* Contact Details */}
+              <div className="mt-3">
+                <p>
+                  <strong>📞 Phone:</strong> +91 79044 09070
+                </p>
+                <p>
+                  <strong>📧 Email:</strong>{" "}
+                  <a
+                    href="mailto:contact@udhaywelfareinstitute.com"
+                    className="text-decoration-none text-dark"
+                  >
+                    contact@udhaywelfareinstitute.com
+                  </a>
+                </p>
+                <p>
+                  <strong>📍 Address:</strong>
+                  <br />
+                  Thiruvannamalai North,
+                  <br />
+                  Polur.
+                </p>
+                <a
+                  href="https://wa.me/917904409070"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-success mt-3"
+                >
+                  💬 Chat on WhatsApp
+                </a>
+              </div>
+            </motion.div>
           </div>
         </div>
       </motion.section>

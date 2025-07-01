@@ -237,10 +237,10 @@ const Home = () => {
 
     emailjs
       .send(
-        "your_service_id",     // ✅ Replace with your EmailJS Service ID
-        "your_template_id",    // ✅ Replace with your Template ID
+        "service_udxx17d",     // ✅ Replace with your EmailJS Service ID
+        "template_dkpumzg",    // ✅ Replace with your Template ID
         formData,
-        "your_public_key"      // ✅ Replace with your Public Key
+        "9MnDDro8K4jSJbxOK"      // ✅ Replace with your Public Key
       )
       .then(() => {
         alert(`Successfully applied for ${formData.course}`);
