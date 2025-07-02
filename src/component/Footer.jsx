@@ -30,10 +30,13 @@ const Footer = () => {
               <div>
                 <h4 className="fw-bold text-light">Udhay Welfare Institute</h4>
                 <p>
-                  A Government-supported initiative in Tamil Nadu, committed to
-                  offering free quality training in competitive exams, IT,
-                  English, and professional skills. Empowering youth with
-                  employment-ready skills.
+                  Youth Welfare and Student initiatives are dedicated to shaping
+                  the future of Tamil Nadu's youth by providing free,
+                  high-quality training in competitive exams, IT, English
+                  communication, and various professional skills. These programs
+                  aim to bridge the skill gap, boost confidence, and make
+                  students employment-ready through structured, accessible, and
+                  inclusive learning experiences.
                 </p>
               </div>
             </div>
@@ -87,7 +90,7 @@ const Footer = () => {
                 Founder & Director
               </p>
               <p className="text-muted" style={{ fontSize: "14px" }}>
-                DMK Youth Wing, Polur
+                Udhay Welfare Institute
               </p>
 
               {/* Divider */}
@@ -105,7 +108,6 @@ const Footer = () => {
                   { label: "About Us", to: "/about" },
                   { label: "Contact", to: "/contact" },
                   { label: "Free Courses", to: "/courses" },
-                
                 ].map((link, idx) => (
                   <li key={idx} className="mb-2">
                     <Link

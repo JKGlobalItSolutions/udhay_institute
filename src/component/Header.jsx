@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-import logo from "../assets/images/logo.jpg";
+import logo from "../assets/images/banner/udhay.jpg";
 
 
 const Header = () => {
