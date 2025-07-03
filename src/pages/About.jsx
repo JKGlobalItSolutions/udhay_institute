@@ -1,9 +1,9 @@
-import React from "react"; 
+import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 // import homeimg from "../assets/images/banner/banner-1.jpg";
-// import about from "../assets/images/about/about-page.jpg"; 
-
+// import about from "../assets/images/about/about-page.jpg";
 
 import home from "../assets/images/banner/our courses.jpg";
 
@@ -12,14 +12,15 @@ const About = () => {
     <>
       {/* Hero Section */}
       <motion.section
-   className="d-flex align-items-center h-100" data-aos="fade-right">
+        className="d-flex align-items-center h-100"
+        data-aos="fade-right"
+      >
         <img
-         src={home}
+          src={home}
           alt="Free Bank Exam Coaching"
           className="img-fluid w-100"
-          style={{ maxHeight: '130vh', objectFit: 'cover' }}
+          style={{ maxHeight: "130vh", objectFit: "cover" }}
         />
-     
       </motion.section>
 
       {/* Introduction Section */}
@@ -59,7 +60,6 @@ const About = () => {
           </motion.div>
         </div>
       </section> */}
-
 
       {/* <section className="d-flex align-items-center h-100" data-aos="fade-right">
         <img
@@ -147,12 +147,19 @@ const About = () => {
         viewport={{ once: true }}
       >
         <div className="container">
-          <h3 className="fw-bold mb-3">Join the Udhayanidhi Stalin Free Learning Mission</h3>
+          <h3 className="fw-bold mb-3">
+            Join the Udhayanidhi Stalin Free Learning Mission
+          </h3>
           <p className="mb-4">
-            Whether you're a student, graduate, or job seeker — we welcome you to enroll in our free courses and take a
-            step toward a brighter future.
+            Whether you're a student, graduate, or job seeker — we welcome you
+            to enroll in our free courses and take a step toward a brighter
+            future.
           </p>
-          <button className="btn btn-light px-4">Apply for Free Courses</button>
+          <Link to="/courses">
+            <button className="btn btn-light px-4">
+              Apply for Free Courses
+            </button>
+          </Link>
         </div>
       </motion.section>
     </>
